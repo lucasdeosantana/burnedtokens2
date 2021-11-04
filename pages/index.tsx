@@ -10,7 +10,7 @@ const Home: NextPage<iProps> = (props) => {
   const [burnedToday, setBurnedToday] = useState((parseInt(props.today.value.slice(0,-6))-parseInt(props.today.day.slice(0,-6))))
   useEffect(()=>{
     setInterval(()=>{
-    axios.get<Itoday>(`http://localhost:3000/api/today?contractaddress=${props.token.contractaddress}`)
+    axios.get<Itoday>(`https://burnedtokens2-pnt6w5ouy-therobt.vercel.app/api/today?contractaddress=${props.token.contractaddress}`)
     .then(response=>{
       setBurnedTotal(parseInt(response.data.value.slice(0,-6)))
       setBurnedToday((parseInt(response.data.value.slice(0,-6))-parseInt(response.data.day.slice(0,-6))))
