@@ -3,7 +3,7 @@ import type { NextPage, GetServerSidePropsContext } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
-import { iProps, Itoday } from './types'
+import { iProps, Itoday } from '../types'
 
 const Home: NextPage<iProps> = (props) => {
   const [burnedTotal, setBurnedTotal] = useState(parseInt(props.today.value.slice(0,-6)))
