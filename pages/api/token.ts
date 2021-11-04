@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { getConnection } from './utils/database/connect';
 import { getToday } from './utils/database/data';
-
+import {Itoken} from '../types'
 type Data = {
     name: string
 }
