@@ -25,15 +25,15 @@ const Home: NextPage<iProps> = (props) => {
         <h1>{props.token.name} - ({props.token.initials})</h1>
       </div>
       <div className="container_topic">
-        <h1>Total de Tokens Queimados</h1>
+        <h1>Amount Burned Tokens</h1>
         <h1>{burnedTotal.toLocaleString("en")} - {((burnedTotal*100)/parseInt(props.token.supply.slice(0,-6))).toFixed(3)}%</h1>
       </div >
       <div className="container_topic">
-        <h1>Total de Tokens Queimados hoje</h1>
+        <h1>Amount Burned Tokens Today</h1>
         <h1>{burnedToday.toLocaleString("en")} - {((burnedToday*100)/parseInt(props.token.supply.slice(0,-6))).toFixed(5)}%</h1>
       </div>
       <div className="container_topic">
-        <h1>Total de Tokens em Circulacao</h1>
+        <h1>Amount Supply</h1>
         <h1>{ (parseInt(props.token.supply.slice(0,-6))-burnedTotal).toLocaleString("en") }</h1>
       </div>
     </div>
