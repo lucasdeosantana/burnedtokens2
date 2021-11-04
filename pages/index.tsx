@@ -41,8 +41,8 @@ const Home: NextPage<iProps> = (props) => {
   )
 }
 export async function getServerSideProps(context:GetServerSidePropsContext) {
-  const responseToday = await axios.get(`http://localhost:3000/api/today?contractaddress=${context.query.contractaddress}`)
-  const responseToken = await axios.get(`http://localhost:3000/api/token?contractaddress=${context.query.contractaddress}`)
+  const responseToday = await axios.get(`https://burnedtokens2-pnt6w5ouy-therobt.vercel.app/api/today?contractaddress=${context.query.contractaddress}`)
+  const responseToken = await axios.get(`https://burnedtokens2-pnt6w5ouy-therobt.vercel.app/api/token?contractaddress=${context.query.contractaddress}`)
   return {
     props: {
       today:responseToday.data,
